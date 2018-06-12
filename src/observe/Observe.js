@@ -15,7 +15,6 @@ function reactive(obj, prop) {
         configurable: true,
         enumerable: true,
         get() {
-            console.log('[Getter]', value)
             //利用js单线程，在get时绑定订阅者
             if (Dep.target) {
                 // 绑定订阅者
@@ -24,8 +23,6 @@ function reactive(obj, prop) {
             return value
         },
         set(newVal) {
-            console.log('[Setter]', newVal)
-            let oldVal = value
             value = newVal
             // 更新时，触发订阅者更新
             dep.notify()

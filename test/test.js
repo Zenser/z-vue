@@ -14,7 +14,7 @@ describe('观察者-订阅者模式测试', function () {
                 css: 4
             }
         }
-        let observe = new Observe(data)
+        new Observe(data)
         new Watcher(data, 'name', function (newVal, oldVal) {
             log(chalk.yellow('notify:  ', oldVal, '->', newVal ))
         })
