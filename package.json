@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "start": "npm run test",
     "test": "mocha --require babel-register ./test/*.js"
   },
   "repository": {
@@ -25,6 +26,7 @@
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
+    "chalk": "^2.4.1",
     "mocha": "^5.0.4"
   }
 }
